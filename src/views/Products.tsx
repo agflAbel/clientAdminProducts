@@ -3,6 +3,7 @@ import { getProducts, updateProductAvailability } from "../services/ProductServi
 import ProductDetails from "../components/ProductDetails"
 import { Product } from "../types"
 
+
 // eslint-disable-next-line react-refresh/only-export-components
 export async function loader() {
   const products = await getProducts()

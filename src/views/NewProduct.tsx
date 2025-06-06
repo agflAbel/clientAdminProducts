@@ -11,8 +11,8 @@ export async function action({ request }: ActionFunctionArgs) {
     error = "Todos los campos son obligatorios"
   }
   const price = Number(data.price);
-  if (isNaN(price) || price < 0) {
-    error = "El precio debe ser un número válido y no negativo";
+  if (isNaN(price) || price < 0 || price == 0) {
+    error = "El precio debe ser un número válido, no negativo ni cero";
   }
   if (error.length) {
     return error
